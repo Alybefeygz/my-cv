@@ -2,7 +2,7 @@ const projectDetails = {
   yosuun: {
     title: "Yosuun",
     meta: "2026 · E-Commerce SaaS · Kurucu Ortak / Full-Stack Developer",
-    image: "yosuun_logo.png",
+    image: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/yosuun_logo.png",
     imageAlt: "Yosuun proje görseli",
     sections: [
       {
@@ -33,7 +33,7 @@ const projectDetails = {
   sidrexgpt: {
     title: "SidrexGPT",
     meta: "2025-2026 · AI / RAG · Full-Stack Developer / AI Developer",
-    image: "SidrexGPT.png",
+    image: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/SidrexGPT.png",
     imageAlt: "SidrexGPT proje görseli",
     sections: [
       {
@@ -64,7 +64,7 @@ const projectDetails = {
   markamind: {
     title: "MarkaMind",
     meta: "2025 — Günümüz · AI SaaS / RAG · Full-Stack Developer / AI Developer",
-    image: "markamind_photo.png",
+    image: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/markamind_photo.png",
     imageAlt: "MarkaMind proje görseli",
     sections: [
       {
@@ -97,7 +97,7 @@ const projectDetails = {
   gordion: {
     title: "Gordion: Geçmişin Kapısı",
     meta: "2025 · Mobile App / AR · Hackathon Birinciliği",
-    image: "gordion_photo.png",
+    image: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/gordion_photo.png",
     imageAlt: "Gordion proje görseli",
     sections: [
       {
@@ -129,15 +129,15 @@ const documentDetails = {
     title: "Yağız Efe Alaybay CV",
     meta: "CV PDF · PORTFOLYO",
     download: {
-      href: "Yağız Efe ALAYBAY - CV.pdf",
-      filename: "Yağız Efe ALAYBAY - CV.pdf",
+      href: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/CV.pdf?download=CV.pdf",
+      filename: "CV.pdf",
       label: "CV PDF İndir",
     },
     pages: [
       {
         label: "CV",
         title: "CV PDF",
-        src: "Yağız Efe ALAYBAY - CV_page-0001.jpg",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/CV_page-0001.jpg",
         type: "image",
         note: "Yağız Efe Alaybay CV görseli.",
       },
@@ -161,14 +161,14 @@ const documentDetails = {
       {
         label: "Sertifika",
         title: "Program Sertifikası",
-        src: "Yağız_Efe_Alaybay-Sertifika_page-0001.jpg",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/Sertifika_page-0001.jpg",
         type: "image",
         note: "Yazılım Mesleki Gelişim Programı sertifikası.",
       },
       {
         label: "Referans",
         title: "Referans Mektubu",
-        src: "Yağız_Efe_Alaybay-Referans_page-0001.jpg",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/Referans_page-0001.jpg",
         type: "image",
         note: "Software Persona referans mektubu.",
       },
@@ -181,7 +181,7 @@ const documentDetails = {
       {
         label: "Kabul",
         title: "Kabul Belgesi",
-        src: "unnamed.png",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/unnamed.png",
         type: "image",
         note: "EcomTalent Academy kabul belgesi.",
       },
@@ -194,7 +194,7 @@ const documentDetails = {
       {
         label: "Kabul",
         title: "Kabul Belgesi",
-        src: "Humanport_kabul.jpeg",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/Humanport_kabul.jpeg",
         type: "image",
         note: "International Project Specialist Training Program kabul belgesi.",
       },
@@ -207,14 +207,14 @@ const documentDetails = {
       {
         label: "Sunum",
         title: "Hackathon Sunumu",
-        src: "gordion-1.jpeg",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/gordion-1.jpeg",
         type: "image",
         note: "Gordion: Geçmişin Kapısı proje sunumu.",
       },
       {
         label: "Katılım",
         title: "HSD Hackathon 2025 Katılım Kartı",
-        src: "gordion-2.jpeg",
+        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/gordion-2.jpeg",
         type: "image",
         note: "HSD Hackathon 2025 yarışmacı kartı.",
       },
