@@ -1,4 +1,64 @@
 const projectDetails = {
+  "botas-pgks": {
+    title: "BOTAŞ PGKS",
+    meta: "2026 · Enterprise / Microservices · Software Engineer / Full-Stack Developer",
+    image: "assets/projects/botas-pgks.jpg",
+    imageAlt: "BOTAŞ PGKS proje görseli",
+    sections: [
+      {
+        title: "BOTAŞ PGKS — Personel Geçiş Kontrol Sistemi",
+        body: [
+          "BOTAŞ için geliştirilen ve aktif olarak kullanılan Personel Geçiş Kontrol Sistemi; kurumsal geçiş operasyonlarının yönetildiği web istemcisi ve mikroservis tabanlı backend altyapısından oluşuyor. Projede AKYA Dijital Dönüşüm bünyesinde full-stack geliştirici olarak görev aldım.",
+        ],
+      },
+      {
+        title: "Teknik Geliştirme",
+        list: [
+          "React, TypeScript ve Vite ile; Tailwind CSS, Shadcn/UI, Framer Motion ve Zustand kullanan, Ribbon menü ve masaüstü tipi pencere yönetimine sahip modüler web arayüzünü geliştirdim.",
+          "Axios tabanlı API katmanı, token tabanlı kimlik doğrulama ve korumalı route yapılarıyla frontend–backend entegrasyonlarını gerçekleştirdim.",
+          "NestJS Monorepo mimarisindeki mikroservislerde NATS üzerinden JWE ile şifreli servis iletişimi, PostgreSQL, Redis ve Docker tabanlı altyapı üzerinde çalıştım.",
+          "NATS Queue Group ile yatay ölçeklendirme ve Caddy Reverse Proxy ile çoklu Gateway node’larına Round-Robin yük dağıtımı yapılan backend mimarisine katkı sağladım.",
+        ],
+      },
+      {
+        title: "Mevcut Durum",
+        body: [
+          "Sistem BOTAŞ bünyesinde aktif olarak kullanılıyor.",
+        ],
+      },
+    ],
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "NestJS", "NATS", "JWE", "PostgreSQL", "Redis", "Docker", "Caddy"],
+  },
+  "pmp-erp": {
+    title: "AKYA PMP-ERP",
+    meta: "2026 · ERP / Web & Mobile · Software Engineer / Full-Stack Developer",
+    image: "assets/projects/pmp-erp.jpg",
+    imageAlt: "AKYA PMP-ERP proje görseli",
+    sections: [
+      {
+        title: "AKYA PMP-ERP — Kurumsal ERP Platformu",
+        body: [
+          "PMP-ERP, AKYA grup şirketlerinin İK, finans, satın alma, stok, proje ve operasyon süreçlerini merkezi olarak yönettiği kurumsal ERP platformudur. Platform hem web üzerinden hem de Android uygulaması olarak kullanılıyor.",
+        ],
+      },
+      {
+        title: "Teknik Geliştirme",
+        list: [
+          "React, TypeScript, Vite ve Ant Design ile modüler ERP arayüzleri geliştirdim.",
+          "Node.js, Express.js, Prisma ve PostgreSQL ile REST API’ler ve ilişkisel veri modelleri oluşturdum.",
+          "Yetkinlik, Takvim, Eğitim ve şirket içi operasyon modüllerini geliştirerek rol/yetki yönetimi, bildirim, dosya işlemleri ve kurumsal iş akışlarını sisteme entegre ettim.",
+          "Web uygulamasını Capacitor ile Android’e taşıyarak push bildirim, konum ve mobil platform entegrasyonları üzerinde çalıştım.",
+        ],
+      },
+      {
+        title: "Mevcut Durum",
+        body: [
+          "Platform AKYA grup şirketlerinde aktif olarak kullanılıyor.",
+        ],
+      },
+    ],
+    tags: ["React", "TypeScript", "Vite", "Ant Design", "Node.js", "Express.js", "Prisma", "PostgreSQL", "Capacitor", "Android"],
+  },
   yosuun: {
     title: "Yosuun",
     meta: "2026 · E-Commerce SaaS · Kurucu Ortak / Full-Stack Developer",
@@ -129,15 +189,15 @@ const documentDetails = {
     title: "Yağız Efe Alaybay CV",
     meta: "CV PDF · PORTFOLYO",
     download: {
-      href: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/CV.pdf?download=CV.pdf",
-      filename: "CV.pdf",
+      href: "assets/cv/Yagiz-Efe-Alaybay-CV.pdf",
+      filename: "Yagiz-Efe-Alaybay-CV.pdf",
       label: "CV PDF İndir",
     },
     pages: [
       {
         label: "CV",
         title: "CV PDF",
-        src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/CV_page-0001.jpg",
+        src: "assets/cv/Yagiz-Efe-Alaybay-CV.jpg",
         type: "image",
         note: "Yağız Efe Alaybay CV görseli.",
       },

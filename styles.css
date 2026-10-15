@@ -490,6 +490,34 @@ li {
   margin-top: 0.25rem;
 }
 
+.timeline-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.6rem;
+  margin-top: 1.1rem;
+}
+
+.timeline-logos img {
+  display: block;
+  width: auto;
+  height: 1.7rem;
+  max-width: 6.5rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.timeline-logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+.timeline-logos .timeline-logo-akya {
+  height: 1.3rem;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -628,6 +656,10 @@ li {
   object-position: center;
 }
 
+.project-logo-pmp-erp {
+  object-position: 70% 35%;
+}
+
 .media-yosuun {
   background-color: #f5f5f1;
 }
@@ -740,7 +772,9 @@ li {
   opacity: 1;
 }
 
-.media-markamind {
+.media-markamind,
+.media-botas,
+.media-pmp-erp {
   background-color: #f6f6f4;
 }
 
@@ -748,7 +782,13 @@ li {
   background-color: #eeeeeb;
 }
 
-.media-gordion::after {
+.media-botas strong {
+  max-width: none;
+  white-space: nowrap;
+}
+
+.media-gordion::after,
+.media-pmp-erp::after {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.72) 0%,
@@ -757,7 +797,8 @@ li {
   );
 }
 
-.media-gordion strong {
+.media-gordion strong,
+.media-pmp-erp strong {
   color: #fff;
 }
 
@@ -779,7 +820,8 @@ li {
 }
 
 .media-yosuun .live-pill,
-.media-gordion .live-pill {
+.media-gordion .live-pill,
+.media-pmp-erp .live-pill {
   background: #fff;
   color: #000;
 }
@@ -1580,6 +1622,7 @@ li {
   .timeline-meta,
   .timeline ul,
   .tag-list,
+  .timeline-logos,
   .project-card figcaption,
   .education-card {
     max-width: min(34rem, calc(100vw - 6rem));
@@ -1712,6 +1755,7 @@ li {
   .timeline-meta,
   .timeline ul,
   .tag-list,
+  .timeline-logos,
   .project-card figcaption,
   .education-card {
     max-width: 17rem;
