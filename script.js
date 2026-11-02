@@ -189,7 +189,7 @@ const documentDetails = {
     title: "Yağız Efe Alaybay CV",
     meta: "CV PDF · PORTFOLYO",
     download: {
-      href: "assets/cv/Yagiz-Efe-Alaybay-CV.pdf",
+      href: "assets/cv/Yagiz-Efe-Alaybay-CV.pdf?v=20261102",
       filename: "Yagiz-Efe-Alaybay-CV.pdf",
       label: "CV PDF İndir",
     },
@@ -197,7 +197,7 @@ const documentDetails = {
       {
         label: "CV",
         title: "CV PDF",
-        src: "assets/cv/Yagiz-Efe-Alaybay-CV.jpg",
+        src: "assets/cv/Yagiz-Efe-Alaybay-CV.jpg?v=20261102",
         type: "image",
         note: "Yağız Efe Alaybay CV görseli.",
       },
@@ -252,11 +252,80 @@ const documentDetails = {
     meta: "INTERNATIONAL PROJECT SPECIALIST TRAINING PROGRAM · BELGRAD/SIRBİSTAN",
     pages: [
       {
+        label: "Sertifika",
+        title: "Uluslararası Proje Uzmanı Yetiştirme Programı Sertifikası",
+        src: "assets/belgrad/sertifika.jpg",
+        type: "image",
+        note: "Human Ports ve TNC Group bünyesinde tamamlanan 191 CPD saatlik program sertifikası.",
+      },
+      {
+        label: "Referans",
+        title: "Uluslararası Proje Uzmanı Referans Mektubu",
+        src: "assets/belgrad/referans-mektubu.jpg",
+        type: "image",
+        note: "Program süresince proje yönetimi, iletişim ve ekip çalışması alanlarındaki çalışmaları değerlendiren referans mektubu.",
+      },
+      {
+        label: "Referans",
+        title: "Human Ports & TNC Group Referans Mektubu",
+        src: "assets/belgrad/human-ports-tnc-referans.jpg",
+        type: "image",
+        note: "Human Ports ve TNC Group yönetimi tarafından verilen profesyonel referans mektubu.",
+      },
+      {
         label: "Kabul",
         title: "Kabul Belgesi",
         src: "https://cgwzqdcprhfefkvontkr.supabase.co/storage/v1/object/public/my-cv/Humanport_kabul.jpeg",
         type: "image",
         note: "International Project Specialist Training Program kabul belgesi.",
+      },
+    ],
+  },
+  "belgrad-anilar": {
+    title: "Belgrad Programı",
+    meta: "HUMAN PORTS · TNC GROUP · BELGRAD/SIRBİSTAN · 2026",
+    pages: [
+      {
+        label: "Tören",
+        title: "Sertifika Töreni",
+        src: "assets/belgrad/sertifika-toreni.jpg",
+        type: "image",
+        note: "191 CPD saatlik Uluslararası Proje Uzmanı Yetiştirme Programı sertifika töreni.",
+      },
+      {
+        label: "TNC",
+        title: "TNC Group International Internship Program",
+        src: "assets/belgrad/tnc-international-internship.jpg",
+        type: "image",
+        note: "TNC Group International Internship Program, Belgrad.",
+      },
+      {
+        label: "Ofis",
+        title: "Human Ports Belgrad Ofisi",
+        src: "assets/belgrad/human-ports-ofis.jpg",
+        type: "image",
+        note: "Human Ports Belgrad ofisinde.",
+      },
+      {
+        label: "Sunum",
+        title: "Yosuun Proje Sunumu",
+        src: "assets/belgrad/yosuun-sunum.jpg",
+        type: "image",
+        note: "Program kapsamında hazırladığım Yosuun proje sunumu.",
+      },
+      {
+        label: "Poster",
+        title: "Yosuun Marka Posterleri",
+        src: "assets/belgrad/yosuun-posterler.jpg",
+        type: "image",
+        note: "Marka tasarımı çalışması kapsamında hazırlanan Yosuun posterleri.",
+      },
+      {
+        label: "Kart",
+        title: "Yosuun Kartvizit",
+        src: "assets/belgrad/yosuun-kart.jpg",
+        type: "image",
+        note: "Program kapsamında Yosuun markası için tasarlanan kartvizit.",
       },
     ],
   },
@@ -390,7 +459,7 @@ function renderDocumentPage(stage, thumbs, pages, pageIndex) {
   stage.append(pageFrame, caption);
 }
 
-function renderDocumentViewer(detail) {
+function renderDocumentViewer(detail, startIndex = 0) {
   dialogBody.replaceChildren();
 
   const pages = detail.pages || [];
@@ -434,7 +503,10 @@ function renderDocumentViewer(detail) {
   viewer.append(thumbList, stage);
   dialogBody.append(viewer);
 
-  if (pages.length) renderDocumentPage(stage, thumbButtons, pages, 0);
+  if (pages.length) {
+    const safeIndex = startIndex >= 0 && startIndex < pages.length ? startIndex : 0;
+    renderDocumentPage(stage, thumbButtons, pages, safeIndex);
+  }
 }
 
 function renderDialogActions(detail) {
@@ -492,7 +564,7 @@ function openDocumentDialog(trigger) {
   dialogEyebrow.textContent = detail.meta;
   dialogTitle.textContent = detail.title;
   renderDialogActions(detail);
-  renderDocumentViewer(detail);
+  renderDocumentViewer(detail, Number(trigger.dataset.page) || 0);
   dialog.showModal();
   dialog.scrollTop = 0;
   document.body.classList.add("dialog-open");
@@ -503,6 +575,12 @@ document.querySelectorAll("[data-document]").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     openDocumentDialog(trigger);
   });
+});
+
+document.querySelectorAll(".timeline-media-item img").forEach((image) => {
+  const markMissing = () => image.closest(".timeline-media-item")?.classList.add("is-missing");
+  image.addEventListener("error", markMissing);
+  if (image.complete && image.naturalWidth === 0) markMissing();
 });
 
 function closeProjectDialog() {
